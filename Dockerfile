@@ -21,6 +21,8 @@ RUN wget ftp://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.gz -O - | tar 
     cd /tmp && rm -rf /tmp/ruby-2.0.0-p353 && \
     gem install --no-ri --no-rdoc bundler
 
+RUN mkdir /cartodb
+
 ADD resources/ /cartodb/
 
 RUN chmod ugo+rw /dev/null

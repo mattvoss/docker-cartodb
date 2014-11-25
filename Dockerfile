@@ -29,7 +29,7 @@ RUN chmod ugo+rw /dev/null
 
 RUN useradd -m -c Cartodb,,,, cartodb
 
-RUN chmod 755 /cartodb/cartodb && cd /home/cartodb
+RUN chmod 755 /cartodb/cartodb.sh && cd /home/cartodb
 
 RUN git clone https://github.com/CartoDB/cartodb.git /home/cartodb/cartodb && \
     git clone https://github.com/CartoDB/Windshaft-cartodb.git /home/cartodb/windshaft-cartodb && \
